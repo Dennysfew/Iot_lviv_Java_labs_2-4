@@ -1,12 +1,12 @@
 package ua.lviv.iot.vsShop.model;
 
 public class Panties extends Lingerie{
-    String type ;
+    String typeOfPanties ;
     String isTransparent;
 
-    public Panties (String nameOfCollection, int year, boolean availability, int price, String type, String isTransparent ) {
-        super(nameOfCollection, year, availability, price);
-        this.type = type;
+    public Panties (String nameOfCollection, int year, boolean availability, int price, String type, String typeOfPanties, String isTransparent ) {
+        super(nameOfCollection, year, availability, price, type);
+        this.typeOfPanties = typeOfPanties;
         this.isTransparent = isTransparent;
     }
     @Override
@@ -15,7 +15,7 @@ public class Panties extends Lingerie{
                 + ", was presented in: " + year
                 + ",  Available: = " + availability
                 + ",costs: " + price
-                + ", type: " + type
+                + ", type: " + typeOfPanties
                 + ", transparent: " + isTransparent
                 + ")";
 
