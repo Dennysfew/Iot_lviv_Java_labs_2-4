@@ -4,8 +4,8 @@ public class SportWear extends Lingerie {
     String styles;
     boolean isSlinky;
 
-    public SportWear (String nameOfCollection, int year, boolean availability,int price, String styles, boolean isSlinky){
-        super(nameOfCollection, year, availability, price);
+    public SportWear (String nameOfCollection, int year, boolean availability,int price, String type, String styles, boolean isSlinky){
+        super(nameOfCollection, year, availability, price, type);
         this.styles = styles;
         this.isSlinky = isSlinky;
     }

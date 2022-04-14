@@ -5,9 +5,9 @@ public class Bras extends Lingerie{
     String size;
     boolean availabilityOfPushUp;
 
-    public Bras (String nameOfCollection, int year, boolean availability, int price,
+    public Bras (String nameOfCollection, int year, boolean availability, int price, String type,
     String size, boolean availabilityOfPushUp){
-        super(nameOfCollection, year, availability, price);
+        super(nameOfCollection, year, availability, price, type);
         this.size = size;
         this.availabilityOfPushUp = availabilityOfPushUp;
     }

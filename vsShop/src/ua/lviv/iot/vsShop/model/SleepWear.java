@@ -4,8 +4,8 @@ public class SleepWear extends Lingerie{
     String fabric;
     String isSet;
     boolean hasPattern;
-    public SleepWear (String nameOfCollection, int year, boolean availability,int price, String fabric, String isSet, boolean hasPattern) {
-        super(nameOfCollection, year, availability, price);
+    public SleepWear (String nameOfCollection, int year, boolean availability,int price, String type, String fabric, String isSet, boolean hasPattern) {
+        super(nameOfCollection, year, availability, price, type);
         this.fabric = fabric;
         this.isSet = isSet;
         this.hasPattern = hasPattern;
