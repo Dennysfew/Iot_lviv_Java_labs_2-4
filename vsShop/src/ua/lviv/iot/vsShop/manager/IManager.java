@@ -6,11 +6,11 @@ import java.util.List;
 
 public interface IManager {
 
-    void addLingerie(Lingerie lingerie);
+    void addLingerie(List<Lingerie> hangar,Lingerie lingerie);
 
 
-    List<Lingerie> findLingerieByCollectionSortByPrice(String nameOfCollection);
+    List<Lingerie> findLingerieByCollectionSortByPrice(List<Lingerie> hangar,String nameOfCollection);
 
 
-    List<Lingerie> findLingerieByYearOfProdSortByPrice(int year);
+    List<Lingerie> findLingerieByYearOfProdSortByPrice(List<Lingerie> hangar,int year);
 }
