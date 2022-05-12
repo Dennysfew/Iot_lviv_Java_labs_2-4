@@ -1,0 +1,15 @@
+nameOfCollection, year, availability, price, type, size, availabilityOfPushUp
+Love Cloud, 2021, false, 40, Bra, S, M, L, XL, true
+Very sexy, 2019, false, 55, Bra, XS, S, M, L, XL, false
+Dream Angels, 2022, true, 78, Bra, S, M, L, true
+nameOfCollection, year, availability, price, type, typeOfPanties, isTransparent
+Dream Angels, 2022, true, 37, Panties, Bikini, No
+Dream Angels, 2022, true, 19, Panties, V-String, Yes
+For Love & Lemons, 2020, true, 30, Panties, Thong, No
+nameOfCollection, year, availability, price, type, fabric, isSet, hasPattern
+Modal Terry, 2021, true, 98, Pyjamas, 95% Modal, 5% Elastane, Yes, false
+The Bridal-suite, 2022, true, 90, Pyjamas, 92% Polyester, 8% Elastane, No, false
+nameOfCollection, year, availability, price, type, styles, isSlinky
+The Move-me, 2022, true, 35, Leggings, High rise, true
+The Love Cloud sport , 2021, true, 50, Leggings, some, true
+Flow On Point, 2020, true, 51, Shorts, some, true

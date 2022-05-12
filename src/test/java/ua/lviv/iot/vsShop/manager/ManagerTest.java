@@ -2,18 +2,15 @@ package ua.lviv.iot.vsShop.manager;
 
 
 import org.junit.jupiter.api.Test;
-import ua.lviv.iot.vsShop.model.Lingerie;
-import ua.lviv.iot.vsShop.model.Bras;
-import ua.lviv.iot.vsShop.model.Panties;
-import ua.lviv.iot.vsShop.model.SleepWear;
-import ua.lviv.iot.vsShop.model.SportWear;
+import ua.lviv.iot.manager.impl.Manager;
+import ua.lviv.iot.model.Lingerie;
+import ua.lviv.iot.model.Bras;
+import ua.lviv.iot.model.Panties;
+import ua.lviv.iot.model.SleepWear;
+import ua.lviv.iot.model.SportWear;
 import java.util.Arrays;
-import java.lang.reflect.Array;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Comparator;
-import java.util.Objects;
-import java.util.stream.Collectors;
 
 import static org.junit.jupiter.api.Assertions.*;
 

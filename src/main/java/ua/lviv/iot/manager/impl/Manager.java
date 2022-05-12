@@ -1,9 +1,9 @@
-package ua.lviv.iot.vsShop.manager;
+package ua.lviv.iot.manager.impl;
 
-import ua.lviv.iot.vsShop.model.Lingerie;
+import ua.lviv.iot.manager.IManager;
+import ua.lviv.iot.model.Lingerie;
 
 import java.util.List;
-import java.util.LinkedList;
 import java.util.Objects;
 import java.util.Comparator;
 import java.util.stream.Collectors;
