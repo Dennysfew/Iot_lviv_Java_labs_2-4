@@ -2,8 +2,12 @@ package ua.lviv.iot;
 
 import ua.lviv.iot.manager.impl.Manager;
 import ua.lviv.iot.manager.impl.ManagerWriter;
-import ua.lviv.iot.model.*;
-
+import ua.lviv.iot.manager.impl.Searcher;
+import ua.lviv.iot.model.Bras;
+import ua.lviv.iot.model.Lingerie;
+import ua.lviv.iot.model.Panties;
+import ua.lviv.iot.model.SleepWear;
+import ua.lviv.iot.model.SportWear;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,7 +15,7 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 
-        Manager LvivShop = new Manager();
+        Manager lvivShop = new Manager();
 
         Bras bra1 = new Bras("Love Cloud", 2021, false, 40, "Bra", "S, M, L, XL", true);
         Bras bra2 = new Bras("Very sexy", 2019, false, 55, "Bra", "XS, S, M, L, XL", false);
@@ -26,32 +30,43 @@ public class Main {
         SleepWear pij2 = new SleepWear("The Bridal-suite", 2022, true, 90, "Pyjamas", "92% Polyester, 8% Elastane", "No", false);
 
 
-        SportWear Legging1 = new SportWear("The Move-me", 2022, true, 35, "Leggings", "High rise", true);
-        SportWear Legging2 = new SportWear("The Love Cloud sport ", 2021, true, 50, "Leggings", "some", true);
-        SportWear Short1 = new SportWear("Flow On Point", 2020, true, 51, "Shorts", "some", true);
+        SportWear legging1 = new SportWear("The Move-me", 2022, true, 35, "Leggings", "High rise", true);
+        SportWear legging2 = new SportWear("The Love Cloud sport ", 2021, true, 50, "Leggings", "some", true);
+        SportWear short1 = new SportWear("Flow On Point", 2020, true, 51, "Shorts", "some", true);
 
 
         List<Lingerie> hangar = new ArrayList<>();
 
-        LvivShop.addLingerie(hangar, bra1);
-        LvivShop.addLingerie(hangar, bra2);
-        LvivShop.addLingerie(hangar, bra3);
-        LvivShop.addLingerie(hangar, panty1);
-        LvivShop.addLingerie(hangar, panty2);
-        LvivShop.addLingerie(hangar, panty3);
-        LvivShop.addLingerie(hangar, pij1);
-        LvivShop.addLingerie(hangar, pij2);
-        LvivShop.addLingerie(hangar, Legging1);
-        LvivShop.addLingerie(hangar, Legging2);
-        LvivShop.addLingerie(hangar, Short1);
+        lvivShop.addLingerie(hangar, bra1);
+        lvivShop.addLingerie(hangar, bra2);
+        lvivShop.addLingerie(hangar, bra3);
+        lvivShop.addLingerie(hangar, panty1);
+        lvivShop.addLingerie(hangar, panty2);
+        lvivShop.addLingerie(hangar, panty3);
+        lvivShop.addLingerie(hangar, pij1);
+        lvivShop.addLingerie(hangar, pij2);
+        lvivShop.addLingerie(hangar, legging1);
+        lvivShop.addLingerie(hangar, legging2);
+        lvivShop.addLingerie(hangar, short1);
 
 
-        System.out.println(LvivShop.findLingerieByCollectionSortByPrice(hangar, "Dream Angels"));
-        System.out.println(LvivShop.findLingerieByYearOfProdSortByPrice(hangar, 2021));
+        System.out.println(lvivShop.findLingerieByCollectionSortByPrice(hangar, "Dream Angels"));
+        System.out.println(lvivShop.findLingerieByYearOfProdSortByPrice(hangar, 2021));
 
         ManagerWriter table = new ManagerWriter();
 
         table.writeCSV(hangar);
+        String txt = """
+        Don't you were walking throw the garden yest? 
+        Don't be mad yest. That just a case. 
+        Is It? Fuck! No this is just you yest? 
+        Yep.
+        """;
+
+        Searcher searcher = new Searcher();
+
+        System.out.println(searcher.findQuestion(txt));
+        System.out.println(searcher.findRightWords(searcher.findQuestion(txt), 4));
 
 
     }
