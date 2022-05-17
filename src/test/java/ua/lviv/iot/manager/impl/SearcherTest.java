@@ -2,7 +2,9 @@ package ua.lviv.iot.manager.impl;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
@@ -21,19 +23,24 @@ class SearcherTest {
 
     @Test
     void findQuestion() {
-        String ex = "What did the third little pig? Was the first little pig very lazy? Was the wolf greedy and does he tried to catch both pigs at once?";
-        assertNotEquals(searcher.findQuestion(txt), null);
-        assertEquals(searcher.findQuestion(txt), ex);
+        List<String> ex = new ArrayList<>();
+
+        ex.add("Was the wolf greedy and does he tried to catch both pigs at once?");
+        ex.add("Was the first little pig very lazy?");
+        ex.add("What did the third little pig?");
+
+        assertNotEquals(null, searcher.findQuestion(txt));
+        assertEquals(ex.toString(), searcher.findQuestion(txt));
     }
 
     @Test
-    void findRightWords() {
+    void findSetOfWordsOfExactNumberOfLetters() {
         ex.add("was");
         ex.add("the");
         ex.add("pig");
         ex.add("did");
         ex.add("and");
-        assertNotEquals(searcher.findRightWords(searcher.findQuestion(txt), 3), null);
-        assertEquals(searcher.findRightWords(searcher.findQuestion(txt), 3), ex);
+        assertNotEquals(searcher.findSetOfWordsOfExactNumberOfLetters(searcher.findQuestion(txt), 3), null);
+        assertEquals(searcher.findSetOfWordsOfExactNumberOfLetters(searcher.findQuestion(txt), 3), ex);
     }
 }

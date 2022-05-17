@@ -57,8 +57,8 @@ public class Main {
 
         table.writeCSV(hangar);
         String txt = """
-        Don't you were walking throw the garden yest? 
-        Don't be mad yest. That just a case. 
+        Dont you were walking throw the garden yest? 
+        Dont be mad yest. That just a case. 
         Is It? Fuck! No this is just you yest? 
         Yep.
         """;
@@ -66,7 +66,7 @@ public class Main {
         Searcher searcher = new Searcher();
 
         System.out.println(searcher.findQuestion(txt));
-        System.out.println(searcher.findRightWords(searcher.findQuestion(txt), 4));
+        System.out.println(searcher.findSetOfWordsOfExactNumberOfLetters(searcher.findQuestion(txt), 4));
 
 
     }
