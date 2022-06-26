@@ -19,14 +19,14 @@ public class Manager implements IManager {
     @Override
     public List<Lingerie> findLingerieByCollectionSortByPrice(List<Lingerie> hangar, String nameOfCollection) {
         return hangar.stream()
-                .filter(lingerie -> Objects.equals(lingerie.getNameOfCollection(),nameOfCollection))
+                .filter(lingerie -> Objects.equals(lingerie.getNameOfCollection(), nameOfCollection))
                 .sorted(Comparator.comparing(Lingerie::getLingeriePrice).reversed())
                 .collect(Collectors.toList());
     }
     @Override
     public List<Lingerie> findLingerieByYearOfProdSortByPrice(List<Lingerie> hangar, int year) {
         return hangar.stream()
-                .filter(lingerie -> Objects.equals(lingerie.getLingerieYear(),year))
+                .filter(lingerie -> Objects.equals(lingerie.getLingerieYear(), year))
                 .sorted(Comparator.comparing(Lingerie::getLingeriePrice).reversed())
                 .collect(Collectors.toList());
     }
